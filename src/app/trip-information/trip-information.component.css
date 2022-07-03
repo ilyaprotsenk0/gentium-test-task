@@ -1,0 +1,16 @@
+.trip-information-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.location-card {
+  margin-bottom: 24px;
+}
+
+.total-time-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

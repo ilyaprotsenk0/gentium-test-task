@@ -1,0 +1,88 @@
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-background-color);
+}
+
+.modal-content {
+  width: 760px;
+  height: 568px;
+  padding: 36px 90px;
+  background-color: var(--modal-content-background-color);
+  box-shadow: -4px 6px 20px 2px rgba(35, 43, 56, 0.2);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-modal-icon {
+  position: absolute;
+  top: 53px;
+  right: 105px;
+}
+
+.close-modal-icon img {
+  width: 14px;
+  height: 14px;
+}
+
+.log-name-container {
+  max-width: 188px;
+  margin-bottom: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-name-container h2 {
+  margin: 0;
+}
+
+.log-name-input {
+  display: block;
+  width: 80%;
+  border: none;
+}
+
+.log-name-container input:focus {
+  outline: none;
+  font-size: 18px;
+}
+
+.edit-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-icon-wrap img {
+  display: block;
+}
+
+.modal-action {
+  position: absolute;
+  bottom: 38px;
+  right: 105px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-actions-drafts {
+  display: block;
+  margin-right: 21px;
+}
+
+.app-section {
+  margin-bottom: 40px;
+}
+
+.app {
+  z-index: 1;
+}

@@ -1,0 +1,31 @@
+<div class="trip-information-container">
+  <div class="depatrute-container">
+    <div class="location-card">
+      <location-card [dateTimeType]="'Departure'"></location-card>
+    </div>
+
+    <div>
+      <time-date-card [dateTimeType]="'Departure'"></time-date-card>
+    </div>
+  </div>
+  <div class="arrival-container">
+    <div class="location-card">
+      <location-card [dateTimeType]="'Arival'"></location-card>
+    </div>
+
+    <div>
+      <time-date-card [dateTimeType]="'Arival'"></time-date-card>
+    </div>
+  </div>
+  <div class="total-time-container card card-blue">
+    <span class="card-label">Total time</span>
+    <div class="card-icon-wrap">
+      <img
+        class="card-icon"
+        src="assets/images/clock-icon.png"
+        alt="Clock icon"
+      />
+    </div>
+    <span class="card-text">0 h 0 m</span>
+  </div>
+</div>

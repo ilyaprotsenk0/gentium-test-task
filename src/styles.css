@@ -1,1 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html,
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+button,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --modal-background-color: #a5aebc;
+  --modal-content-background-color: #ffffff;
+  --button-black-background-color: #00112c;
+  --card-gray-text-color: #78859a;
+  --card-blue-background-color: #dde4ff;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 14px 8px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--card-gray-text-color);
+  font-weight: 400;
+}
+
+.card-label {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-size: 12px;
+}
+
+.card-normal {
+  width: 154px;
+}
+
+.card-larger {
+  width: 172px;
+}
+
+.card-shadow {
+  box-shadow: -4px 5px 20px rgba(180, 177, 177, 0.2);
+}
+
+.card-blue {
+  background-color: var(--card-blue-background-color);
+  transition: cubic-bezier(0.2, 0.82, 0.165, 1);
+}
+
+.card-white {
+  background-color: var(--modal-content-background-color);
+  transition: cubic-bezier(0.2, 0.82, 0.165, 1);
+}
+
+.card-icon-wrap {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon-wrap img {
+  display: block;
+}
+
+.card-text,
+.card-input {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.card-input {
+  width: 70%;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.card-input:focus {
+  outline: none;
+}
+
+.card-text {
+  overflow: hidden;
+}
+
+.mr24 {
+  margin-right: 24px;
+}
+
+.app-section-title {
+  font-weight: 600;
+}
+
+.app-section {
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.calendar-container {
+  z-index: 100;
+  background: white;
+}
+
+.black-btn {
+  padding: 10px 24px;
+  background-color: var(--button-black-background-color);
+  color: var(--modal-content-background-color);
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+}

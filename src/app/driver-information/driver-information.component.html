@@ -1,0 +1,68 @@
+<h3 class="app-section-title">Driver information</h3>
+<div class="drivers-container">
+  <div class="drivers-toggle card-shadow" [class.mr24]="otherChoosen">
+    <div
+      [class.card-larger]="!otherChoosen"
+      [class.card-blue]="!otherChoosen"
+      [class.card-white]="otherChoosen"
+      [class.mr24]="!otherChoosen"
+      class="card"
+      (click)="chooseSelf()"
+    >
+      <span class="card-label">Driver</span>
+      <div class="card-icon-wrap" *ngIf="!otherChoosen">
+        <img
+          class="card-icon"
+          src="assets/images/human-icon.png"
+          alt="Human icon"
+        />
+      </div>
+      <span class="card-text">Self</span>
+    </div>
+
+    <div
+      [class.card-larger]="!otherChoosen"
+      [class.card-blue]="otherChoosen"
+      [class.card-white]="!otherChoosen"
+      class="card card-larger"
+      (click)="chooseOther()"
+    >
+      <div class="card-icon-wrap" *ngIf="otherChoosen">
+        <img
+          class="card-icon"
+          src="assets/images/humans-icon.png"
+          alt="Humans icon"
+        />
+      </div>
+      <span class="card-text">Other</span>
+    </div>
+  </div>
+
+  <div class="other-driver-card card card-shadow" *ngIf="otherChoosen">
+    <div class="card-icon-wrap">
+      <img
+        class="card-icon"
+        src="assets/images/humans-icon.png"
+        alt="Humans icon"
+      />
+    </div>
+    <span class="card-text" *ngIf="!editChoosen">{{
+      driverName || "Driver name"
+    }}</span>
+    <input class="card-input" *ngIf="editChoosen" [(ngModel)]="driverName" />
+    <div
+      class="card-icon-wrap edit-icon"
+      *ngIf="!editChoosen"
+      (click)="toggleEdit()"
+    >
+      <img src="assets/images/pencil-icon.png" alt="Pencil icon" />
+    </div>
+    <div
+      class="card-icon-wrap edit-icon"
+      *ngIf="editChoosen"
+      (click)="toggleEdit()"
+    >
+      <img src="assets/images/xmark-icon.png" alt="Xmark icon" />
+    </div>
+  </div>
+</div>

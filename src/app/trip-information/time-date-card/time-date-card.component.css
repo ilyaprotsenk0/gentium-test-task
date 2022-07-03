@@ -1,0 +1,9 @@
+.card-text {
+  font-size: 14px;
+}
+
+.calendar-container {
+  position: absolute;
+  top: 56px;
+  right: 0;
+}

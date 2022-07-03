@@ -1,0 +1,35 @@
+.demo-inline-calendar-card {
+  width: 292px;
+}
+
+.time-date-container {
+  padding: 40px 16px;
+}
+
+.calendar-container {
+  margin-bottom: 44px;
+}
+
+.submit-form-btn {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+}
+
+.time-input-label {
+  margin: 8px;
+  color: black;
+  font-weight: 600;
+}
+
+.time-input-wrap {
+  margin-bottom: 24px;
+}
+
+#appt {
+  width: 90%;
+  border: 2px solid #dde9ff;
+  border-radius: 24px;
+  padding: 11px;
+  font-size: 16px;
+}

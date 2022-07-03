@@ -1,0 +1,18 @@
+.drivers-toggle {
+  display: flex;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.drivers-container {
+  display: flex;
+  width: fit-content;
+}
+
+.other-driver-card {
+  width: 216px;
+}
+
+.other-driver-card div:last-child {
+  margin-left: auto;
+}

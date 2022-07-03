@@ -1,0 +1,30 @@
+<div
+  class="time-date-container card-shadow demo-inline-calendar-card"
+  *ngIf="!formSubmited"
+>
+  <h3 class="time-input-label">Time</h3>
+  <div class="time-container">
+    <div class="time-input-wrap">
+      <input
+        #timeInput
+        type="time"
+        id="appt"
+        name="appt"
+        min="00:00"
+        max="24:00"
+        required
+      />
+    </div>
+  </div>
+  <h3 class="time-input-label">Date</h3>
+  <mat-card class="calendar-container">
+    <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+  </mat-card>
+
+  <button
+    class="submit-form-btn black-btn"
+    (click)="submitForm(timeInput.value, selectedDate, $event)"
+  >
+    Done
+  </button>
+</div>

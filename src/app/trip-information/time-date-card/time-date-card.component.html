@@ -1,0 +1,18 @@
+<div
+  class="card card-normal card-white card-shadow"
+  (click)="toggleCalendar($event, toogleCalendar)"
+  #toogleCalendar
+>
+  <span class="card-label">{{ dateTimeType }}</span>
+  <div class="card-icon-wrap">
+    <img
+      class="card-icon"
+      src="assets/images/clock-icon.png"
+      alt="Clock icon"
+    />
+  </div>
+  <span class="card-text">--/--/----|--:--</span>
+  <div class="calendar-container" *ngIf="calendarShown">
+    <time-date-form [dateTimeType]="dateTimeType"></time-date-form>
+  </div>
+</div>

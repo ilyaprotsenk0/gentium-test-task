@@ -1,0 +1,14 @@
+<div class="card card-normal card-blue card-shadow">
+  <span class="card-label">{{ dateTimeType }}</span>
+  <div class="card-icon-wrap">
+    <img
+      class="card-icon"
+      src="assets/images/location-icon.png"
+      alt="Location icon"
+    />
+  </div>
+  <input
+    class="card-input location-input"
+    [placeholder]="dateTimeType === 'Departure' ? 'from' : 'to'"
+  />
+</div>

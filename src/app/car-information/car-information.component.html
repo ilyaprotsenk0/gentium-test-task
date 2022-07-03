@@ -1,0 +1,61 @@
+<h3 class="app-section-title">Car information</h3>
+<div class="car-information-container">
+  <!-- Left column card (selected car) template -->
+
+  <div class="selected-car-card card card-white card-shadow card-larger mr24">
+    <span class="card-label">Make & model</span>
+    <div class="card-icon-wrap">
+      <img
+        class="card-icon"
+        src="assets/images/wheel-icon.png"
+        alt="Wheel icon"
+      />
+    </div>
+    <span class="card-text">{{ selectedCar?.model | model }}</span>
+  </div>
+
+  <!-- Right column card (custom select with options of cars list) template -->
+
+  <div
+    class="select-car-card card card-shadow card-larger"
+    [class.card-blue]="listOpened"
+  >
+    <span class="card-label">Registration number</span>
+    <!-- Main template of right column card -->
+
+    <div class="card-icon-wrap">
+      <img
+        class="card-icon"
+        src="assets/images/gear-icon.png"
+        alt="Gear icon"
+      />
+    </div>
+
+    <span class="card-text">Registration</span>
+
+    <div class="card-icon-wrap" *ngIf="!listOpened" (click)="toggleList()">
+      <img src="assets/images/open-list-icon.png" alt="Open list icon" />
+    </div>
+    <div class="card-icon-wrap" *ngIf="listOpened" (click)="toggleList()">
+      <img src="assets/images/close-list-icon.png" alt="Close list icon" />
+    </div>
+
+    <!-- Template of drop-list options -->
+
+    <section class="cars-list-container card-shadow" *ngIf="listOpened">
+      <div
+        class="car-wrap card-larger"
+        *ngFor="let car of carsList"
+        (click)="selectCar(car.license)"
+      >
+        <div class="car-img-wrap">
+          <img [src]="car.imgUrl" [alt]="car.model + ' photo'" />
+        </div>
+        <div class="car-text-wrap">
+          <span class="car-license">{{ car.license | license }}</span>
+          <span class="car-model">{{ car.model }}</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
